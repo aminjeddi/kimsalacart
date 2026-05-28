@@ -3,14 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --font-display: "Archivo Black", Impact, sans-serif;
   --font-serif: "Cormorant Garamond", "Tiempos Text", Georgia, serif;
-  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "IBM Plex Mono", ui-monospace, monospace;
 }
 
 html, body {
-  background: #EFEBE2;
-  color: #0A0A0A;
+  background: #FBEFD9;
+  color: #E0593F;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
@@ -18,34 +17,36 @@ html, body {
 
 html { scroll-behavior: smooth; }
 
-::selection { background: #0A0A0A; color: #EFEBE2; }
+::selection { background: #E0593F; color: #FBEFD9; }
 
-.huge {
-  font-family: var(--font-display);
-  letter-spacing: -0.045em;
-  line-height: 0.82;
-}
+body { font-family: var(--font-mono); }
 
-.serif { font-family: var(--font-serif); }
+.serif { font-family: var(--font-serif); font-weight: 500; }
+.mono { font-family: var(--font-mono); }
 
 .label {
-  font-family: var(--font-sans);
-  font-weight: 500;
-  letter-spacing: 0.22em;
+  font-family: var(--font-mono);
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   font-size: 11px;
 }
 
-.hairline { height: 1px; background: rgba(10,10,10,0.18); }
+.hairline { height: 1px; background: rgba(224,89,63,0.35); }
 
 @keyframes marquee {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
-.marquee-track { animation: marquee 45s linear infinite; }
+.marquee-track { animation: marquee 50s linear infinite; }
 
 @keyframes drift {
   0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-8px) rotate(1deg); }
+  50% { transform: translateY(-10px) rotate(1deg); }
 }
 .drift { animation: drift 8s ease-in-out infinite; }
+
+@keyframes steam {
+  0% { transform: translateY(0) scale(1); opacity: 0.55; }
+  100% { transform: translateY(-50px) scale(1.5); opacity: 0; }
+}
+.steam { animation: steam 3.5s ease-out infinite; }

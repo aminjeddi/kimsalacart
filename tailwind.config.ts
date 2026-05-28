@@ -5,16 +5,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        paper: "#EFEBE2",
-        ink: "#0A0A0A",
-        smoke: "#6B6864",
-        rule: "#1A1A1A",
-        accent: "#B8442C",
+        paper: "#FBEFD9",
+        cream: "#F7E6C5",
+        ink: "#E0593F",
+        deep: "#C44225",
+        smoke: "#E89A82",
+        rule: "#E0593F",
+        accent: "#E0593F",
       },
       fontFamily: {
-        display: ["var(--font-display)", "Impact", "sans-serif"],
         serif: ["var(--font-serif)", "Georgia", "serif"],
-        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        mono: ["var(--font-mono)", "ui-monospace", "monospace"],
+        sans: ["var(--font-mono)", "ui-monospace", "monospace"],
       },
     },
   },
